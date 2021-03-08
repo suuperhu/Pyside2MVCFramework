@@ -1,0 +1,11 @@
+/* Pyside2MVCFramework base qss*/
+
+* {
+    font: normal bold 16px "微软雅黑";
+    margin: 5px;
+    border: 1px dashed black;
+    padding: 0px;
+    spacing: 0px;
+    text-align: center center;
+    border-radius: 3px 5px;
+}
