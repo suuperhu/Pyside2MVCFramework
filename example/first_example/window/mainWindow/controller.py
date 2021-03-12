@@ -9,7 +9,7 @@
 # @EnFileDescription    :
 """
 
-from src.core.controller import Controller
+from pyside2mvcframework.core.controller import Controller
 from example.first_example.window.mainWindow.view import MainWindowView
 from example.first_example.window.mainWindow import MainWindowService
 from example.first_example.window.buttonWindow.controller import ButtonWindowController

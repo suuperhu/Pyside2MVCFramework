@@ -11,7 +11,7 @@
 
 from PySide2.QtCore import QFile
 
-from src.core.exceptions import OpenQFileError
+from pyside2mvcframework.core.exceptions import OpenQFileError
 
 
 class OpenQFile(object):
@@ -32,6 +32,3 @@ class OpenQFile(object):
 
 if __name__ == '__main__':
     print("unit test from {filename}".format(filename=__file__))
-    with OpenQFile("/\测试.txt") as fp:
-        content = fp.readAll().decode("utf-8")
-        print(content)

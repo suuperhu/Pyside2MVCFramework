@@ -8,7 +8,7 @@
 # @ZhFileDescription    :
 # @EnFileDescription    :
 """
-from src.core.service import Service
+from pyside2mvcframework.core.service import Service
 
 
 class InputService(Service):

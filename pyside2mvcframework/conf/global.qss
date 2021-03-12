@@ -1,4 +1,4 @@
-/* Pyside2MVCFramework base qss*/
+/* Pyside2MVCFramework global qss*/
 
 * {
     font: normal bold 16px "微软雅黑";

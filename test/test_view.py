@@ -2,29 +2,28 @@
 """
 # @SoftwareIDE          : PyCharm2020Pro
 # @ProjectName          : PySide2MVCFramework
-# @FileName             : view.py
+# @FileName             : test_view.py
 # @Author               : 胡守杰
 # @Email                : 2839414139@qq.com
 # @ZhFileDescription    :
 # @EnFileDescription    :
 """
-
-import os
 from pyside2mvcframework.core.view import View
-from conf.global_settings import BASE_PATH
+from conf.global_settings import BASE_DIR
+import os
 
 
-class ButtonWindowView(View):
-    uiFilePath = os.path.join(BASE_PATH, "src\\window\\buttonWindow\\dButtonWindow.ui")
+class TestView(View):
+    uiFilePath = os.path.join(BASE_DIR.parent, "test\\test_view.ui")
+    styleFilePath = os.path.join(BASE_DIR.parent, "test\\test_view.qss")
 
 
 if __name__ == '__main__':
     print("unit test from {filename}".format(filename=__file__))
-    from PySide2.QtWidgets import QApplication
     import sys
+    from PySide2.QtWidgets import QApplication
 
     app = QApplication(sys.argv)
-    view = ButtonWindowView().birth()
-    print(type(view))
+    view = TestView().birth()
     view.show()
     sys.exit(app.exec_())

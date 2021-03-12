@@ -8,21 +8,21 @@
 # @ZhFileDescription    : PySide2MVCFramework设置模块
 # @EnFileDescription    : PySide2MVCFramework Setting Module
 """
-import os
+from pathlib import Path
 import platform
+import os
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 if platform.system() == "Windows":
-    BASE_PATH: str = "F:\\PycharmProject\\pythonProject\\PySide2MVCFramework"
-    BASE_STYLE_FILE_PATH = os.path.join(BASE_PATH, "src\\core\\base.qss")
-elif platform.system() == "Linux":
-    BASE_PATH = ""
-    BASE_STYLE_FILE_PATH = ""
+    GLOBAL_QSS_PATH = os.path.join(BASE_DIR, "conf\global.qss")
 else:
-    BASE_PATH = ""
-    BASE_STYLE_FILE_PATH = ""
+    GLOBAL_QSS_PATH = os.path.join(BASE_DIR, "conf/global.qss")
 
 if __name__ == '__main__':
     print("unit test from {filename}".format(filename=__file__))
-    with open(BASE_STYLE_FILE_PATH) as fp:
-        content = fp.read() + "哈哈哈"
-        print(content)
+    print(BASE_DIR)
+    print(GLOBAL_QSS_PATH)
+    with open(GLOBAL_QSS_PATH, encoding="utf-8") as fp:
+        globalStyleSheet = fp.read()
+    print(globalStyleSheet)

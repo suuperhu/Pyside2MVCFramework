@@ -9,7 +9,7 @@
 # @EnFileDescription    :
 """
 
-from src.core.service import Service
+from pyside2mvcframework.core.service import Service
 from example.first_example.window.inputWindow.controller import InputController
 
 

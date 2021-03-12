@@ -9,7 +9,7 @@
 # @EnFileDescription    :
 """
 from PySide2.QtCore import Signal, QObject
-from src.core.model import Model
+from pyside2mvcframework.core.model import Model
 
 
 class UserModel(Model):

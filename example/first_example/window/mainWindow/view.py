@@ -9,7 +9,7 @@
 # @EnFileDescription    :
 """
 
-from src.core.view import View
+from pyside2mvcframework.core.view import View
 
 
 class MainWindowView(View):

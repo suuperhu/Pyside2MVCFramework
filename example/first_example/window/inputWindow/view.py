@@ -9,8 +9,8 @@
 # @EnFileDescription    :
 """
 import os
-from src.core.view import View
-from src.core.settings import BASE_PATH
+from pyside2mvcframework.core.view import View
+from conf.global_settings import BASE_PATH
 
 
 class InputWindowView(View):

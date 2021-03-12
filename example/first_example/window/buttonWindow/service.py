@@ -10,7 +10,7 @@
 """
 from PySide2.QtWidgets import QLabel
 
-from src.core.service import Service
+from pyside2mvcframework.core.service import Service
 
 
 class ButtonWindowService(Service):

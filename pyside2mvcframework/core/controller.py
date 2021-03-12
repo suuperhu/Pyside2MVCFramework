@@ -11,10 +11,13 @@
 from typing import Union
 from PySide2.QtWidgets import QDialog, QWidget, QMainWindow
 
-from src.core.exceptions import ServiceOrViewOrModelNullError
-
 
 class Controller(object):
+    view = None
+    service = None
+
+    def __init__(self):
+        self.setupController()
 
     def setupController(self):
         """
@@ -53,8 +56,8 @@ class Controller(object):
 
     def setupSolts(self):
         """
-        绑定当前界面的槽函数
-        Bind the slot function of the current interface
+        绑定当前界面的原生信号槽函数
+        Bind the native signal slot function of the current interface
         :return: None
         """
         pass
@@ -66,8 +69,10 @@ class Controller(object):
         :param parent: QWidget
         :return: Union[QDialog, QWidget, QMainWindow]
         """
-        self.view.setParent(parent)
-        return self.view
+        if self.view:
+            self.view.setParent(parent)
+            return self.view
+        raise Exception("view属性不能为空")
 
 
 if __name__ == '__main__':

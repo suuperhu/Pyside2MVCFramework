@@ -9,7 +9,7 @@
 # @EnFileDescription    :
 """
 
-from src.core.model import Model, Data
+from pyside2mvcframework.core.model import Model, Data
 
 
 class User(Model):

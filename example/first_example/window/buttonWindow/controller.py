@@ -8,7 +8,7 @@
 # @ZhFileDescription    :
 # @EnFileDescription    :
 """
-from src.core.controller import Controller
+from pyside2mvcframework.core.controller import Controller
 from example.first_example.window.buttonWindow.service import ButtonWindowService
 from example.first_example.window.buttonWindow.view import ButtonWindowView
 from example.first_example.model import UserModel
